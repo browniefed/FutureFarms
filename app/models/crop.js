@@ -1,5 +1,7 @@
+var attr = DS.attr;
+
 App.Crop = DS.Model.extend({
 	id: attr('number'),
 	name: attr('string'),
-	field: DS.belongsTo('field');
+	cropfield: DS.hasMany('cropfield')
 })

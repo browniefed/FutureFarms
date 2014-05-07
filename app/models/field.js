@@ -1,5 +1,10 @@
+var attr = DS.attr;
+
 App.Field = DS.Model.extend({
 	id: attr('number'),
 	name: attr('string'),
-	crop: DS.hasMany('crop')
-})
+	acres: attr('number'),
+	description: attr('string'),
+	operator: DS.hasMany('operator'),
+	cropfield: DS.hasMany('field')
+});
